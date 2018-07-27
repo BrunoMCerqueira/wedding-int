@@ -1,1 +1,8 @@
+<div>
+  <%= form_for @keyword, url: {action: "update"} do |f| %>
+    <%= f.label :word, 'Palavra' %>
+    <%= f.text_field :word %>
+    <%= f.submit "Editar" %>
+  <% end %>
 
+</div>

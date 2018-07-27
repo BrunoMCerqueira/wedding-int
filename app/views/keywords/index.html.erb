@@ -1,0 +1,23 @@
+<h2>Listando Keywords!</h2>
+<br>
+<table>
+    <tr>
+      <th>Word</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <% @keywords.each do |keyword| %>
+      <tr>
+        <td><%= keyword.word %></td>
+        <td><%= link_to 'Show', keyword %></td>
+        <td><%= link_to 'Edit', edit_keyword_path(keyword) %></td>
+        <td><%= link_to 'Delete', keyword, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+      </tr>
+    <% end %>
+
+</table>
+
+<br>
+
+<%= link_to 'Nova Keyword', new_keyword_path %>

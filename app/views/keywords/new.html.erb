@@ -1,0 +1,8 @@
+<div>
+  <%= form_for @keyword, url: {action: "create"} do |f| %>
+    <%= f.label :word, 'Palavra' %>
+    <%= f.text_field :word %>
+    <%= f.submit "Criar" %>
+  <% end %>
+
+</div>
